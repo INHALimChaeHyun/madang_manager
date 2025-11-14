@@ -32,7 +32,7 @@ if len(name) > 0:
        tab2.write("고객번호: " + str(custid))
        tab2.write("고객명: " + name)
        select_book = tab2.selectbox("구매 서적:",books)
-``
+
        if select_book is not None:
               bookid = select_book.split(",")[0]
               dt = time.localtime()
@@ -43,5 +43,6 @@ if len(name) > 0:
               if tab2.button('거래 입력'):
                      dbConn.commit()
                      tab2.write('거래가 입력되었습니다.')
+
 
 
